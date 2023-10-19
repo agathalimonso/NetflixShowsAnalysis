@@ -1,0 +1,13 @@
+                                                 --- Netflix Shows Analysis ---
+--- In this project, I want to find out about Netflix shows in terms of their revenue, ratings, budget, etc. I want to find out
+    whether there are any relationships between top-grossing shows with budgets or any other variables.---
+
+SELECT
+    country,
+    count(*) AS count
+FROM NetflixMovie
+WHERE country IS NOT NULL
+GROUP BY country
+ORDER BY count
+DESC
+LIMIT 13
