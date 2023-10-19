@@ -1,6 +1,15 @@
-                                                 --- Netflix Shows Analysis ---
---- In this project, I want to find out about Netflix shows in terms of their revenue, ratings, budget, etc. I want to find out
-    whether there are any relationships between top-grossing shows with budgets or any other variables.---
+-- Hollywood Highest Grossing Movie Analysis --
+In this project, I want to find out about Netflix shows in terms of their revenue, ratings, budget, etc. 
+I want to find out whether there are any relationships between top-grossing shows with budgets or any other variables.
+
+--Dataset: 
+1) https://www.kaggle.com/datasets/sanjeetsinghnaik/top-1000-highest-grossing-movies
+2) https://www.kaggle.com/datasets/thedevastator/global-movie-franchise-revenue-and-budget-data
+3) https://www.kaggle.com/datasets/rajugc/imdb-top-250-movies-dataset
+4) Manual searching for some missing values (e.g.: Missing budget values, etc).
+
+--Source: Kaggle
+--Queried using: SQLite Online
 
 SELECT
     country,
