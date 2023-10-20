@@ -30,9 +30,17 @@ ORDER BY budget_usd ASC
 LIMIT 3
 
 Answer:
-"$10,000,000 "	"Halloween"
-"$10,000,000 "	"The Grudge"
-"$10,500,000 "	"E.T. the Extra-Terrestrial"
+"15000"	"Paranormal Activity"
+"60000"	"The Blair Witch Project"
+"3500000"	"The Full Monty"
+
+* What about action films?
+SELECT budget_usd, title, genre = 'Action'
+FROM HollywoodMoviesFinalSQL
+GROUP BY title
+ORDER BY budget_usd ASC
+Answer:
+"9500000" "Venom: Let There Be Carnage"
 
 3.	What is the average movie duration per genre?
 SELECT AVG(duration), genre
