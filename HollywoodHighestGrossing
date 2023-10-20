@@ -1,22 +1,10 @@
--- Hollywood Highest Grossing Movie Analysis --
-In this project, I want to find out about Netflix shows in terms of their revenue, ratings, budget, etc. 
-I want to find out whether there are any relationships between top-grossing shows with budgets or any other variables.
-
 --Dataset: 
 1) https://www.kaggle.com/datasets/sanjeetsinghnaik/top-1000-highest-grossing-movies
 2) https://www.kaggle.com/datasets/thedevastator/global-movie-franchise-revenue-and-budget-data
 3) https://www.kaggle.com/datasets/rajugc/imdb-top-250-movies-dataset
 4) Manual searching for some missing values (e.g.: Missing budget values, etc).
-
 --Source: Kaggle
 --Queried using: SQLite Online
-
-
-In this project, I will create a fictional situation in which this dataset may be required for research.
-
-Stakeholders: New filmmakers wanting to create a movie is interested what the market likes through time.
-
-Goals: For filmmakers to know what the market likes and advise them what kind of movies they should make.
 
 Questions:
 1.	What is the highest-grossing movie genre and sub-genre based on world-wide sales? List 5.
@@ -30,7 +18,7 @@ Answer: Action
 SELECT subgenre, world_wide_sales_usd
 FROM HollywoodMoviesFinalSQL
 GROUP BY subgenre
-ORDER BY world_wide_sales_usd
+ORDER BY world_wide_sales_usd DESC
 
 Answer: Family
 
@@ -65,8 +53,23 @@ Answer:
 "143.5"	"Mystery"
 
 The film-maker wants to check whether there is a correlation between type of license and budget, curious if claims of extra legal requirements will mean extra cost of production. 
-1.	Find the average budget per type of license.
+1.	Find the average budget per type of license & genre.
+SELECT AVG(budget_usd), license, genre, year
+FROM HollywoodMoviesFinalSQL
+GROUP BY year
+ORDER BY year DESC
+LIMIT 10
 
+Answer:
+"291000000"	"PG-13"	"Action"	"2023"
+"226250000"	"PG-13"	"Action"	"2022"
+"104625000"	"PG"	"Adventure"	"2021"
+"77125000"	"R"	"Comedy"	"2020"
+"117425000"	"R"	"Action"	"2019"
+"102054054.05405405"	"PG-13"	"Drama"	"2018"
+"105358536.58536585"	"PG"	"Adventure"	"2017"
+"108363636.36363636"	"PG"	"Adventure"	"2016"
+"112685714.28571428"	"PG-13"	"Action"	"2015"
+"99961363.63636364"	"R"	"Action"	"2014"
 
-Deliverable: A report answering all the questions as well as data visualization through PowerBI.
-
+Check out my Medium page for the complete report!
